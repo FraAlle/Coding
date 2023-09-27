@@ -1,0 +1,8 @@
+ciao sono brutto
+ciao sono bello[ENTER]
+
+ciao sono trom[BACKSPACE][BACKSPACE]mon[ENTER]
+x
+google.com[ENTER]
+pytjo[BACKSPACE][BACKSPACE]hon[ENTER]
+c++[ENTER]
